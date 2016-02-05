@@ -1,6 +1,7 @@
 /* CUSTOMIZE THE TOP NAV
 -------------------------------------------------- */
 nav[role="main-nav"]{
+	margin: 0 rem-calc(20);
 	height: rem-calc(70);
 	.navbar-brand{
 		//margin-top: rem-calc(5);
@@ -24,7 +25,8 @@ nav[role="main-nav"]{
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  height: rem-calc(700);
+  margin-bottom: 1rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -33,7 +35,7 @@ nav[role="main-nav"]{
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: rem-calc(700); //32rem;
   background-color: #777;
 }
 .carousel-item > img {
@@ -58,51 +60,130 @@ nav[role="main-nav"]{
 }
 
 
-/* MARKETING CONTENT
+/* COMMON CONTENT STYLES FOR LANDING PAGE
 -------------------------------------------------- */
 
-/* Center Introductory text and set styling for sub-text */
-.marketing .col-lg-12 {
-	h2, p {
-		@include center-block;
-		text-align: center;
-	}
-	h2 {
-		margin-bottom: rem-calc(20);
-	}
+/* Placeholders */
+
+%vertical-padding {
+	padding-top: rem-calc(50);
+	padding-bottom: rem-calc(50);
+}
+
+%horizontal-padding {
+	padding-left: rem-calc(200);
+	padding-right: rem-calc(200);
+}
+
+/* Center and set styling for section header and sub-text */
+.section-header , .section-subtext{
+	@include center-block;
+	text-align: center;
+}
+
+.section-header {
+	font-family: $raleway-bold;
+}
+
+.section-subtext {
+	margin-bottom: rem-calc(100);
 }
 
 
-.marketing .trending-destinations .col-lg-12{
-	padding: 0 rem-calc(100);
+/* INTRODUCTORY CONTENT
+-------------------------------------------------- */
+
+.intro{
+	//@extend %vertical-padding;
+}
+
+
+/* VALUE PROPOSITION CONTENT
+-------------------------------------------------- */
+.val-prop {
+	@extend %vertical-padding;
+	@extend %horizontal-padding;
 	
-	h2 {
-		@include center-block;
-		text-align: center;
-		margin-bottom: rem-calc(20);
+	background: url("../images/slippers_beach.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	box-shadow: inset 0px 0px 500px 500px rgba(#000, 0.4);
+
+	/* Thin out the marketing headings */
+	.featurette-heading {
+	  font-weight: 300;
+	  line-height: 1;
+	  letter-spacing: -.05rem;
 	}
 }
-.marketing .trending-destinations .card-img-top {
-	max-width: 100%; //rem-calc(354);
+
+/* TRENDING DESTINATIONS
+-------------------------------------------------- */
+
+.trending-destinations {
+	@extend %vertical-padding;
+	.col-lg-12 {
+		padding: 0 rem-calc(100);
+	}
+
+	// .section-header {
+	// 	margin-bottom: rem-calc(50);
+	// }
+
+	.card-img-top {
+		max-width: 100%; //rem-calc(354);
+	}
+
+	.card-title {
+		font-family: $raleway-bold;
+		font-size: 1.2rem;
+		&:after {
+			content: "\f152";
+			font-family: FontAwesome;
+			float: right;
+		}
+	}
 }
 
-/* Center align the text within the three columns below the carousel */
-.marketing .val-prop .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.marketing .val-prop h2 {
-  font-weight: normal;
-}
-.marketing .val-prop .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+/* MARKETING
+-------------------------------------------------- */
+
+.marketing {
+	@extend %vertical-padding;
+	.col-lg-4 {
+	  margin-bottom: 1.5rem;
+	  text-align: center;
+		p {
+		  margin-right: .75rem;
+		  margin-left: .75rem;
+		}
+	}
+
+	 h2 {
+	  font-weight: normal;
+	}
 }
 
-/* Modify activities styling */
+/* ACTIVITIES
+-------------------------------------------------- */
+.activities {
+	@extend %padded-row;
+	.card-img {
+		width: 100%;
+	}
+} 
 
-.marketing .activities .card-img {
-	width: 100%;
+
+/* FOOTER
+-------------------------------------------------- */
+footer {
+	background-color: #1c515a;
+	min-height: rem-calc(200);
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
 }
 
 
@@ -112,14 +193,6 @@ nav[role="main-nav"]{
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

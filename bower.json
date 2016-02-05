@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "modernizr": "~2.8.1",
-    "bootstrap": "4.0"
+    "bootstrap": "4.0",
+    "font-awesome": "fontawesome#^4.5.0"
   },
   "overrides": {
     "bootstrap": {

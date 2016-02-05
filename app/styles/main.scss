@@ -2,10 +2,12 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap/scss/bootstrap-flex.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
 // Import Partials
 @import "functions";
+@import "fonts";
 @import "variables";
 @import "mixins";
 @import "base";
