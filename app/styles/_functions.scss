@@ -1,4 +1,3 @@
-
 /// Remove the unit of a length
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
@@ -11,7 +10,11 @@
 }
 
 
-@function calculateRem($size) {
-  $remSize: $size / 16px;
+/// REM Calculator
+/// @param {Number} $number - Unitless Size to calculate Rem value from
+/// @return {Number} $number - Unit in Rem
+@function rem-calc($size) {
+  $base-font: strip-unit($font-size-root);
+  $remSize: $size / $base-font;
   @return $remSize * 1rem;
 }

@@ -1,0 +1,5 @@
+//Rem Fontsize with Px fallback
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: rem-calc($size);
+}

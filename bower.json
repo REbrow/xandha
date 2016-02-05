@@ -9,7 +9,6 @@
     "bootstrap": {
       "main": [
         "scss/bootstrap-flex.scss",
-        //"assets/fonts/bootstrap/*",
         "dist/js/bootstrap.js"
       ]
     }
