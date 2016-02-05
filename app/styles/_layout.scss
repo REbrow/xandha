@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 nav[role="main-nav"]{
 	margin: 0 rem-calc(20);
-	height: rem-calc(70);
+	height: 10vh; //rem-calc(70);
 	.navbar-brand{
 		//margin-top: rem-calc(5);
 		font-size: rem-calc(30);
@@ -25,17 +25,26 @@ nav[role="main-nav"]{
 
 /* Carousel base class */
 .carousel {
-  height: rem-calc(700);
+  height: 90vh;
   margin-bottom: 1rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
+
+  & h1{
+  	font-family: $raleway-bold;
+  	text-shadow: none;
+  }
+
+  & p{
+  	text-shadow: none;
+  }
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: rem-calc(700); //32rem;
+  height: 90vh;
   background-color: #777;
 }
 .carousel-item > img {
@@ -68,11 +77,19 @@ nav[role="main-nav"]{
 %vertical-padding {
 	padding-top: rem-calc(50);
 	padding-bottom: rem-calc(50);
+
 }
 
 %horizontal-padding {
-	padding-left: rem-calc(200);
-	padding-right: rem-calc(200);
+	@include media-breakpoint-up(sm) {
+	 	padding-left: rem-calc(100);
+		padding-right: rem-calc(100);
+	}
+
+	@include media-breakpoint-up(lg) {
+	 	padding-left: rem-calc(100);
+		padding-right: rem-calc(100);
+	}
 }
 
 /* Center and set styling for section header and sub-text */
@@ -86,7 +103,7 @@ nav[role="main-nav"]{
 }
 
 .section-subtext {
-	margin-bottom: rem-calc(100);
+	margin-bottom: rem-calc(50);
 }
 
 
@@ -95,6 +112,9 @@ nav[role="main-nav"]{
 
 .intro{
 	//@extend %vertical-padding;
+	.section-subtext {
+		margin-bottom: rem-calc(100);
+	}
 }
 
 
@@ -103,19 +123,39 @@ nav[role="main-nav"]{
 .val-prop {
 	@extend %vertical-padding;
 	@extend %horizontal-padding;
-	
-	background: url("../images/slippers_beach.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
 
-	box-shadow: inset 0px 0px 500px 500px rgba(#000, 0.4);
+	background-color: $bermoda-2;
+	color: $white;
 
 	/* Thin out the marketing headings */
 	.featurette-heading {
 	  font-weight: 300;
 	  line-height: 1;
-	  letter-spacing: -.05rem;
+	  letter-spacing: .05rem;
+	  font-family: $raleway-bold;
+	  margin-top: 1rem;
+	}
+
+	& ul{
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		margin-top: 1rem;
+		line-height: 1.2rem;
+		& li{
+			padding-left: 0;
+			margin-left: 0;
+			margin-bottom: rem-calc(20);
+
+			& img {
+				display: inline-block;
+				margin-right: rem-calc(20);
+			}
+
+			& h4 {
+				display: inline-block;
+			}
+		}
 	}
 }
 
@@ -123,25 +163,26 @@ nav[role="main-nav"]{
 -------------------------------------------------- */
 
 .trending-destinations {
-	@extend %vertical-padding;
+	//@extend %vertical-padding;
 	.col-lg-12 {
 		padding: 0 rem-calc(100);
 	}
 
-	// .section-header {
-	// 	margin-bottom: rem-calc(50);
-	// }
+	.section-header {
+		margin-top: rem-calc(50);
+	}
 
 	.card-img-top {
 		max-width: 100%; //rem-calc(354);
 	}
 
 	.card-title {
+		color: $shiny-peacock;
 		font-family: $raleway-bold;
 		font-size: 1.2rem;
 		&:after {
 			content: "\f152";
-			font-family: FontAwesome;
+			font-family: "FontAwesome";
 			float: right;
 		}
 	}
@@ -151,7 +192,15 @@ nav[role="main-nav"]{
 -------------------------------------------------- */
 
 .marketing {
-	@extend %vertical-padding;
+	//@extend %vertical-padding;
+	.col-lg-12{
+		padding: 0 auto;
+	}
+
+	.section-header{
+		margin-bottom: rem-calc(50);
+		font-size: 50px;
+	}
 	.col-lg-4 {
 	  margin-bottom: 1.5rem;
 	  text-align: center;
@@ -179,11 +228,35 @@ nav[role="main-nav"]{
 /* FOOTER
 -------------------------------------------------- */
 footer {
-	background-color: #1c515a;
-	min-height: rem-calc(200);
+	background-color: $styx;
+	height: auto;
 	margin: 0;
 	padding: 0;
-	overflow-y: hidden;
+	overflow-y: auto;
+	& .top {
+	
+		padding-top: rem-calc(40);
+		padding-bottom: rem-calc(40);
+	
+	}
+	& h5{
+		color: $florabrin-green;
+		font-family: $raleway-bold;
+	}
+	& ul{
+		padding-left: 0;
+		margin-left: 0;
+		list-style: none;
+
+		& li{
+			padding-left: 0;
+			margin-left: 0;
+		}
+	}
+	& hr{
+		border-color: rgba($white, 0.07);
+		margin: rem-calc(10) 0;
+	}
 }
 
 
@@ -191,7 +264,7 @@ footer {
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 2rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* RESPONSIVE CSS
