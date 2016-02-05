@@ -4,7 +4,7 @@ nav[role="main-nav"]{
 	margin: 0 rem-calc(20);
 	height: 10vh; //rem-calc(70);
 	.navbar-brand{
-		//margin-top: rem-calc(5);
+		margin-right: rem-calc(20);
 		font-size: rem-calc(30);
 		font-weight: bold;
 	}
@@ -12,6 +12,10 @@ nav[role="main-nav"]{
 	.nav{
 		margin-top: rem-calc(10);
 		margin-left: rem-calc(20);
+	}
+
+	.nav-link {
+		font-family: $opensans-semibold;
 	}
 
 	button.btn-primary{
@@ -87,8 +91,8 @@ nav[role="main-nav"]{
 	}
 
 	@include media-breakpoint-up(lg) {
-	 	padding-left: rem-calc(100);
-		padding-right: rem-calc(100);
+	 	padding-left: rem-calc(200);
+		padding-right: rem-calc(200);
 	}
 }
 
@@ -177,7 +181,7 @@ nav[role="main-nav"]{
 	}
 
 	.card-title {
-		color: $shiny-peacock;
+		color: $styx;
 		font-family: $raleway-bold;
 		font-size: 1.2rem;
 		&:after {
