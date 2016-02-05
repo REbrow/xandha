@@ -1,0 +1,21 @@
+{
+  "name": "xandha-app",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "bootstrap": "4.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "scss/bootstrap-flex.scss",
+        //"assets/fonts/bootstrap/*",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
