@@ -1,3 +1,4 @@
+
 /* CUSTOMIZE THE TOP NAV
 -------------------------------------------------- */
 .global-header {
@@ -97,11 +98,11 @@ nav[role="main-nav"]{
 
 %horizontal-padding {
 	@include media-breakpoint-up(sm) {
-	 	padding-left: rem-calc(100);
-		padding-right: rem-calc(100);
+	 	padding-left: rem-calc(50);
+		padding-right: rem-calc(50);
 	}
 
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 	 	padding-left: rem-calc(200);
 		padding-right: rem-calc(200);
 	}
@@ -170,7 +171,7 @@ nav[role="main-nav"]{
 
 			& img {
 				display: inline-block;
-				margin-right: rem-calc(20);
+				margin-right: rem-calc(15);
 			}
 
 			& h4 {
