@@ -1,13 +1,17 @@
 
+
+.landing-wrap{
+  background-color: $fundy-fog;
+  width: 100%;
+  height: 100%;
+  //box-shadow: inset 0px 10px 200px 50px rgba($black, 0.9);
+}
 /* CUSTOMIZE THE TOP NAV
 -------------------------------------------------- */
-.global-header {
-	margin: 0 rem-calc(20);
-}
 nav[role="main-nav"]{
-	// padding-top: rem-calc(20);
+	padding-top: rem-calc(10);
 	height: 9vh;
-	background-color: $white;
+	@include background-gradient(rgba($black, 0.5), rgba($black, 0.1));
 
 	.navbar-brand{
 		margin-right: rem-calc(50);
@@ -19,15 +23,6 @@ nav[role="main-nav"]{
 	.nav{
 		margin-top: rem-calc(10);
 		margin-left: rem-calc(20);
-	}
-
-	.nav-item {
-		margin-right: rem-calc(12);
-	}
-
-	.nav-link {
-		font-family: $opensans-semibold;
-		font-weight: bold;
 	}
 
 	button.btn-primary{
@@ -43,6 +38,7 @@ nav[role="main-nav"]{
 .carousel {
   height: 91vh;
   margin-bottom: 1rem;
+
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -57,33 +53,6 @@ nav[role="main-nav"]{
   	text-shadow: none;
   }
 }
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 90vh;
-  background-color: #777;
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
-}
-
-.carousel-indicators {
-  top: 1.5rem;
-  right: 1.5rem;
-  bottom: auto;
-  left: auto;
-  width: 1rem;
-  margin-left: 0;
-}
-
-.carousel-indicators > li {
-  margin-bottom: .25rem;
-}
-
 
 /* COMMON CONTENT STYLES FOR LANDING PAGE
 -------------------------------------------------- */
@@ -250,7 +219,7 @@ nav[role="main-nav"]{
 	.card-img {
 		width: 100%;
 	}
-} 
+}
 
 
 /* FOOTER
@@ -262,10 +231,10 @@ footer {
 	padding: 0;
 	overflow-y: auto;
 	& .top {
-	
+
 		padding-top: rem-calc(40);
 		padding-bottom: rem-calc(40);
-	
+
 	}
 	& h5{
 		color: $florabrin-green;
