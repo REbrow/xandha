@@ -198,6 +198,13 @@ nav[role="main-nav"]{
 	}
 }
 
+/*======== Content Wrap ========*/
+.content-wrap{
+  background-color: #EDEFED;
+  width: 100%;
+  height: auto;
+}
+
 /* TRENDING DESTINATIONS
 -------------------------------------------------- */
 
@@ -208,7 +215,8 @@ nav[role="main-nav"]{
 	}
 
 	.section-header {
-		margin-top: rem-calc(50);
+		margin-top: rem-calc(20);
+    margin-bottom: rem-calc(50);
 	}
 
 	.card-img-top {
@@ -239,7 +247,7 @@ nav[role="main-nav"]{
 		margin-bottom: rem-calc(50);
 		font-size: 50px;
 	}
-	.col-lg-4 {
+	.col-lg-6 {
 	  margin-bottom: 1.5rem;
 	  text-align: center;
 		p {
@@ -272,36 +280,30 @@ nav[role="main-nav"]{
 
 /* FOOTER
 -------------------------------------------------- */
-footer {
-	background-color: $styx;
-	height: auto;
-	margin: 0;
-	padding: 0;
-	overflow-y: auto;
-	& .top {
+.upper-footer, .bottom-footer{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: darken($white, 10%);
 
-		padding-top: rem-calc(40);
-		padding-bottom: rem-calc(40);
+  & h4{
+    font-family: $raleway-bold;
+  }
+  & ul{
+    list-style: none;
+    padding-left: 0;
+  }
 
-	}
-	& h5{
-		color: $florabrin-green;
-		font-family: $raleway-bold;
-	}
-	& ul{
-		padding-left: 0;
-		margin-left: 0;
-		list-style: none;
+  & hr{
+    border-color: lighten($black, 20%);
+  }
+}
 
-		& li{
-			padding-left: 0;
-			margin-left: 0;
-		}
-	}
-	& hr{
-		border-color: rgba($white, 0.07);
-		margin: rem-calc(10) 0;
-	}
+.upper-footer{
+  background-color: lighten($black, 10%);
+}
+
+.bottom-footer{
+  background-color: lighten($black, 5%);
 }
 
 
