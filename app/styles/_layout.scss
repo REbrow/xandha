@@ -268,13 +268,53 @@ nav[role="main-nav"]{
 .activities {
 	@extend %vertical-padding;
 
+  .col-lg-12 {
+    padding: 0 rem-calc(100);
+  }
+
 	.section-header {
 		margin-bottom: rem-calc(50);
 		font-size: 50px;
 	}
-	.card-img {
-		width: 100%;
-	}
+
+  .grid-wrap{
+    background: #DDD;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vw;
+  }
+
+  /* clear fix */
+  .grid-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  /* ---- .grid-item ---- */
+  .grid-item {
+    width: 39.26%; //33.333%;
+  }
+
+  .grid-item {
+    // float: left;
+  }
+
+  .grid-item img {
+    display: block;
+    max-width: 100%;
+  }
+
+  @supports not (flex-wrap: wrap) {
+    .grid-wrap {
+      display: block;
+    }
+    .grid-item {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
 }
 
 

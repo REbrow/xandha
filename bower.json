@@ -5,7 +5,8 @@
     "modernizr": "~2.8.1",
     "bootstrap": "4.0",
     "font-awesome": "fontawesome#^4.5.0",
-    "sass-css3-mixins": "*"
+    "sass-css3-mixins": "*",
+    "masonry": "^4.0.0"
   },
   "overrides": {
     "bootstrap": {
