@@ -6,7 +6,7 @@
     "bootstrap": "4.0",
     "font-awesome": "fontawesome#^4.5.0",
     "sass-css3-mixins": "*",
-    "masonry": "^4.0.0"
+    "bootstrap-daterangepicker": "^2.1.19"
   },
   "overrides": {
     "bootstrap": {

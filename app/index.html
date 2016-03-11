@@ -42,25 +42,31 @@
         <!-- Landing Viewport content -->
         <div class="landing-viewport-content">
           <div class="inner">
-            <h1 class="display-3">Example headline.</h1>
+            <h2 class="display-3">Find amazing spots to relax</h2>
             <p>Cras justo odio, dapibus facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            <!-- Booking Form -->
             <form class="form-inline">
               <div class="form-group">
-                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                <label class="sr-only" for="selectDestination">Email address</label>
+                <select class="form-control form-control-lg" id="selectDestination">
+                  <option value="">Select Destination</option>}
+                  option
+                  <option>La Manga Ilashe</option>
+                  <option>Epe Resort</option>
+                  <option>Vantage Beach Hotel</option>
+                  <option>Whispering Palms Resort</option>
+                  <option>Hermitage Gadern Resort</option>
+                  <option>La Campagne Beach Resort</option>}
+                  option
+                </select>
               </div>
               <div class="form-group">
                 <label class="sr-only" for="exampleInputPassword3">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                <input type="text" class="form-control form-control-lg" id="exampleInputPassword3" placeholder="Check In" name="daterange">
               </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Remember me
-                </label>
-              </div>
-              <button type="submit" class="btn btn-primary">Sign in</button>
+              <button type="submit" class="btn btn-primary btn-lg">Book</button>
             </form>
+            <!-- End of Booking Form -->
           </div>
         </div><!-- /end of landing viewport content -->
       </div>
@@ -88,20 +94,23 @@
 
 
     <!-- ======== Intro Section ======== -->
-    <div class="container">
-      <!-- Introductory phrase -->
-      <div class="row intro">
-        <div class="col-lg-12">
-          <h2 class="section-header featurette-heading">Take a trip. <span class="text-muted">Discover Naija like never before</span></h2>
-          <p class="section-subtext">Welcome to Nigeria, the home of hospitality, a land of diverse opportunities with a unique history, culture, climate, investment opportunities, tourist attractions and holiday resorts. As the heartbeat of Africa, Nigeria truly represents the commercial and cultural nerve-center of Africa. You are welcome.</p>
+    <div class="content-wrap">
+      <div class="container">
+        <!-- Introductory phrase -->
+        <div class="row intro">
+          <div class="col-lg-12">
+            <h2 class="section-header featurette-heading">Take a trip. <span class="text-muted">Discover Naija like never before</span></h2>
+            <p class="section-subtext">Welcome to Nigeria, the home of hospitality, a land of diverse opportunities with a unique history, culture, climate, investment opportunities, tourist attractions and holiday resorts. As the heartbeat of Africa, Nigeria truly represents the commercial and cultural nerve-center of Africa. You are welcome.</p>
+          </div>
         </div>
-      </div>
-    </div><!-- /.Container -->
+      </div><!-- /.Container -->
+    </div><!-- /.Content-wrap -->
+
     <!-- ======== End of Intro Section ======== -->
 
 
     <!-- ======== Content Wrap ======== -->
-    <div class="content-wrap">
+    <div class="content-wrap padded">
       <!--======== Centering Container ========-->
       <div class="container">
 
@@ -363,7 +372,8 @@
     <script src="/bower_components/desandro-matches-selector/matches-selector.js"></script>
     <script src="/bower_components/fizzy-ui-utils/utils.js"></script>
     <script src="/bower_components/outlayer/outlayer.js"></script>
-    <script src="/bower_components/masonry/masonry.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
