@@ -1,13 +1,20 @@
 /*======== Landing Viewport wrapper ========*/
 .landing-viewport-wrap{
-  //background-color: $fundy-fog;
-  background-image: url("../images/destination_images/slide1.jpg");
+  background-color: none;
+  //background-image: url("../images/destination_images/slide1.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  //background-size: cover;
   width: 100%;
   height: 100vh;
   box-shadow: inset 0 80px 100px rgba($black, 0.6);
+  & video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
 }
+
 /*======== Customize landing viewport top nav ========*/
 nav[role="main-nav"]{
 	padding-top: rem-calc(15);
@@ -25,9 +32,7 @@ nav[role="main-nav"]{
 	}
 }
 
-
 /*======== Landing Viewport content styles ========*/
-
 .landing-viewport-content {
   height: 80vh;
   margin-bottom: 0;
@@ -59,7 +64,7 @@ nav[role="main-nav"]{
 
 .landing-viewport-footer{
   height: 10vh;
-  background-color: rgba($black, 0.9);
+  background-color: rgba($styx, 0.9);
   clear: both;
   overflow: hidden;
   & p, a{
@@ -80,24 +85,33 @@ nav[role="main-nav"]{
       display: table-cell;
       text-align: center;
       vertical-align: middle;
-      border-right: thin solid lighten($black, 15%);
+      border-right: thin solid lighten($styx, 10%);
     }
     & a{
       display: block;
-      padding: rem-calc(30) rem-calc(25);
+      padding: 3.5vh 3.5vw;
       font-family: $raleway-bold;
       &:hover{
-        background-color: $fundy-fog;
-        padding: rem-calc(30) rem-calc(25);
+        background-color: $aprikose;
+        padding: 3.5vh 3.5vw;
+        text-decoration: none;
       }
     }
     &:nth-of-type(2){
       margin-left: 0;
       margin-right: 0;
       float: right;
-      width: 20%;
-      border-right: none;
-      border-left: thin solid lighten($black, 10%);
+      width: 15%;
+      border: none;
+      & li{
+          border: none; //thin solid lighten($styx, 10%);
+      }
+      & a{
+        padding: 3.5vh .5vw;
+        &:hover{
+          padding: 3.5vh .5vw;
+        }
+      }
     }
   }
 }
@@ -151,62 +165,18 @@ nav[role="main-nav"]{
 }
 
 
-/* VALUE PROPOSITION CONTENT
--------------------------------------------------- */
-.val-prop {
-	@extend %vertical-padding;
-	@extend %horizontal-padding;
 
-	background-color: $bermoda-2;
-	color: $white;
-	min-height: rem-calc(400);
-	box-shadow: inset 0px 0px 10px rgba($black, 0.2);
-
-	/* Thin out the marketing headings */
-	.featurette-heading {
-	  font-weight: 300;
-	  line-height: 1;
-	  letter-spacing: .05rem;
-	  font-family: $raleway-bold;
-	  margin-top: 1rem;
-	}
-
-	.text-muted {
-		color: $orange;
-	}
-
-	& ul{
-		list-style: none;
-		padding-left: 0;
-		margin-left: 0;
-		margin-top: 1rem;
-		line-height: 1.2rem;
-		& li{
-			padding-left: 0;
-			margin-left: 0;
-			margin-bottom: rem-calc(20);
-
-			& img {
-				display: inline-block;
-				margin-right: rem-calc(15);
-			}
-
-			& h4 {
-				display: inline-block;
-			}
-		}
-	}
-}
 
 /*======== Content Wrap ========*/
 .content-wrap{
-  background-color: #EDEFED;
+  //background-color: #EDEFED;
+  background-color: $savant;
   width: 100%;
   height: auto;
 }
 
-/* TRENDING DESTINATIONS
--------------------------------------------------- */
+
+/*======== TRENDING DESTINATIONS ========*/
 
 .trending-destinations {
 	@extend %vertical-padding;
@@ -227,7 +197,7 @@ nav[role="main-nav"]{
 	.card-title {
 		color: $styx;
 		font-family: $raleway-bold;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		&:after {
 			content: "\f152";
 			font-family: "FontAwesome";
@@ -236,36 +206,9 @@ nav[role="main-nav"]{
 	}
 }
 
-/* MARKETING
--------------------------------------------------- */
 
-.marketing {
-	.col-lg-12{
-		padding: 0 auto;
-	}
+/*======== ACTIVITIES ========*/
 
-	.section-header{
-		margin-bottom: rem-calc(50);
-		font-size: 50px;
-	}
-	.col-lg-6 {
-	  margin-bottom: 1.5rem;
-	  text-align: center;
-		p {
-		  margin-right: .75rem;
-		  margin-left: .75rem;
-		}
-	}
-
-	 h4 {
-	  font-weight: normal;
-	  font-family: $raleway-bold;
-	  margin-top: rem-calc(10);
-	}
-}
-
-/* ACTIVITIES
--------------------------------------------------- */
 .activities {
 	@extend %vertical-padding;
   padding-left: rem-calc(85);
@@ -290,18 +233,68 @@ nav[role="main-nav"]{
     background-size: cover;
   }
 
-  .text-hover{
-    font-family: $raleway-bold;
-    text-align: center;
-    background-color: rgba($orange, 0.6);
+  & a{
     display: block;
-    width: auto;
-    margin: rem-calc(40);
-    & h4{
-      //margin: rem-calc(40) auto;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    //transition
+    color: $white;
+  }
+
+  .content-wrap{
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($orange, 0);
+    transition: background-color 0.3s ease;
+
+    & .activity-content{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+
+      & h2{
+        font-family: $raleway-bold;
+        color: $white;
+      }
+    }
+
+    &:hover{
+      background-color: rgba($orange, 0.6);
+    }
+
+  }
+
+}
+
+
+/*======== PARTNERSHIPS ========*/
+
+.partnerships {
+  .col-lg-12{
+    padding: 0 auto;
+  }
+
+  .section-header{
+    margin-bottom: rem-calc(50);
+    font-size: 50px;
+  }
+  .col-lg-6 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    p {
+      margin-right: .75rem;
+      margin-left: .75rem;
     }
   }
 
+   h4 {
+    font-weight: normal;
+    font-family: $raleway-bold;
+    margin-top: rem-calc(10);
+  }
 }
 
 

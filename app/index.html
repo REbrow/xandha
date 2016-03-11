@@ -28,7 +28,9 @@
     <![endif]-->
     <!--======== Landing Viewport wrap ========-->
     <div class="landing-viewport-wrap">
-
+    <video autoplay loop id="bgvid">
+        <source src="images/globe.mp4" type="video/mp4">
+    </video>
       <!-- Top Nav -->
       <nav class="navbar navbar-full" role="main-nav">
         <a href="#" class="navbar-brand">Xandha</a>
@@ -41,8 +43,24 @@
         <div class="landing-viewport-content">
           <div class="inner">
             <h1 class="display-3">Example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>Cras justo odio, dapibus facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            <form class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
           </div>
         </div><!-- /end of landing viewport content -->
       </div>
@@ -82,37 +100,6 @@
     <!-- ======== End of Intro Section ======== -->
 
 
-    <!-- ======== Marketing messaging ======== -->
-    <!--<div class="container-fluid">-->
-      <!--<div class="row val-prop">
-        <div class="col-md-5 col-md-push-7">
-          <ul>
-            <li>
-              <img src="https://placehold.it/50x50" alt="..." class="img-circle">
-              <h4>Find Amazing locations</h4>
-            </li>
-
-            <li>
-              <img src="https://placehold.it/50x50" alt="..." class="img-circle">
-              <h4>Book events with ease</h4>
-            </li>
-
-            <li>
-              <img src="https://placehold.it/50x50" alt="..." class="img-circle">
-              <h4>Book awesome spots!</h4>
-            </li>
-          </ul>
-
-        </div>
-        <div class="col-md-7 col-md-pull-5">
-          <h2 class="featurette-heading">Why Xandha?<span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-      </div>--><!-- /.row val-prop -->
-    <!--</div>--><!-- /.container-fluid -->
-    <!-- ======== End of Marketing messaging ======== -->
-
-
     <!-- ======== Content Wrap ======== -->
     <div class="content-wrap">
       <!--======== Centering Container ========-->
@@ -130,7 +117,7 @@
                 <div class="card">
                   <img class="card-img-top" data-src="" src="images/destination_images/protea_hotels_thumb.jpg" alt="Card image cap">
                   <div class="card-block">
-                    <h4 class="card-title">Whispering Palms</h4>
+                    <h4 class="card-title">La Magna Ilashe</h4>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <!-- <a href="#" class="btn btn-primary">Visit</a> -->
                   </div>
@@ -139,7 +126,7 @@
                 <div class="card">
                   <img class="card-img-top" data-src="" src="images/destination_images/slide1.jpg" alt="Card image cap">
                   <div class="card-block">
-                    <h4 class="card-title">Obudu Cattle Ranch</h4>
+                    <h4 class="card-title">Epe Resort</h4>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <!-- <a href="#" class="btn btn-primary">Visit</a> -->
                   </div>
@@ -148,7 +135,7 @@
                 <div class="card">
                   <img class="card-img-top" data-src="" src ="images/destination_images/slide2.jpg" alt="Card image cap">
                   <div class="card-block">
-                    <h4 class="card-title">La Campagne</h4>
+                    <h4 class="card-title">Vantage Beach Hotel</h4>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <!-- <a href="#" class="btn btn-primary">Visit</a> -->
                   </div>
@@ -159,7 +146,7 @@
                 <div class="card">
                   <img class="card-img-top" data-src="" src="images/destination_images/protea_hotels_thumb.jpg" alt="Card image cap">
                   <div class="card-block">
-                    <h4 class="card-title">Whispering Palms</h4>
+                    <h4 class="card-title">Whispering Palms Resort</h4>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <!-- <a href="#" class="btn btn-primary">Visit</a> -->
                   </div>
@@ -168,7 +155,7 @@
                 <div class="card">
                   <img class="card-img-top" data-src="" src="images/destination_images/slide1.jpg" alt="Card image cap">
                   <div class="card-block">
-                    <h4 class="card-title">Obudu Cattle Ranch</h4>
+                    <h4 class="card-title">Hermitage Gadern Resort</h4>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <!-- <a href="#" class="btn btn-primary">Visit</a> -->
                   </div>
@@ -177,7 +164,7 @@
                 <div class="card">
                   <img class="card-img-top" data-src="" src ="images/destination_images/slide2.jpg" alt="Card image cap">
                   <div class="card-block">
-                    <h4 class="card-title">La Campagne</h4>
+                    <h4 class="card-title">La Campagne Beach Resort</h4>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <!-- <a href="#" class="btn btn-primary">Visit</a> -->
                   </div>
@@ -198,28 +185,64 @@
             <div class="col-lg-12">
               <h2 class="section-header">What you can do this holiday</h2>
               <p class="section-subtext">
-                Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+                Escape the hustle &amp; bustle of life, find pleasure in the simple things. From camping to beach massages, engage in fun activities of variety...your experience begins here.
               </p>
             </div><!--/.col-lg-12-->
 
             <div class="col-sm-2 col-md-8 columns activity-card-container">
               <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg')">
-                <!-- <div class="text-hover">
-                  <h4>Horse Back riding</h4>
-                </div> -->
+                <a href="#" title="">
+                  <div class="content-wrap">
+                    <div class="activity-content">
+                      <h2>Horse Back riding</h2>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
             <div class="col-sm-2 col-md-4 columns activity-card-container">
-              <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg')"></div>
+              <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg')">
+                <a href="#" title="">
+                  <div class="content-wrap">
+                    <div class="activity-content">
+                      <h2>Canoeing</h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
             <div class="col-sm-2 col-md-4 columns activity-card-container">
-              <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg')"></div>
+              <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg')">
+                <a href="#" title="">
+                  <div class="content-wrap">
+                    <div class="activity-content">
+                      <h2>Water Skiing</h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
             <div class="col-sm-2 col-md-4 columns activity-card-container">
-              <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg')"></div>
+              <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg')">
+                <a href="#" title="">
+                  <div class="content-wrap">
+                    <div class="activity-content">
+                      <h2>Jet Surfing</h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
             <div class="col-sm-2 col-md-4 columns activity-card-container">
-              <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg')"></div>
+              <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg')">
+                <a href="#" title="">
+                  <div class="content-wrap">
+                    <div class="activity-content">
+                      <h2>Exploring</h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
            <!--  <div class="col-sm-2 col-md-4 columns activity-card-container">
               <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg')"></div>
@@ -240,7 +263,7 @@
           <hr class="featurette-divider"></hr>
 
           <!--======== Partnerships ========-->
-          <div class="row marketing">
+          <div class="row partnerships">
             <div class="col-lg-12">
             <h2 class="section-header">Partner with us</h2>
           </div>
@@ -248,14 +271,14 @@
           <div class="col-lg-6">
             <img class="img-circle" src="images/we-cover-you.png" alt="Generic placeholder image" width="250" height="250">
             <h4>Work with us</h4>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p>Are you a resort, a vacation spot or a chillout spot? Grow your business &amp; increase your customer base by partnering with us and leveraging our unique network </p>
             <p><a class="btn btn-success btn-lg" href="#" role="button">View details</a></p>
           </div><!-- /.col-lg-6 -->
 
           <div class="col-lg-6">
             <img class="img-circle" src="images/serve-your-product.png" alt="Generic placeholder image" width="250" height="250">
             <h4>Market your product with us</h4>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p>Got amazing art &amp; crafts works to sell? We've got you covered. Leverage on our platform to generate thousands of sales leads by listing your art &amp; crafts works with us!</p>
             <p><a class="btn btn-success btn-lg" href="#" role="button">View details</a></p>
           </div><!-- /.col-lg-6 -->
           </div><!-- /.row -->
@@ -275,10 +298,7 @@
           <div class="col-sm-3">
             <h4>Xandha</h4>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
+            <p>Find amazing spots &amp; destinations to relax with Xandha. We provide you with the best tourism information, destinations &amp; packages across Nigeria</p>
           </div>
           <div class="col-sm-2 col-md-offset-2">
             <h4>About</h4>
