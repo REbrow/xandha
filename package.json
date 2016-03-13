@@ -36,11 +36,11 @@
     },
     "rules": {
       "quotes": [
-        2,
+        0,
         "single"
       ],
       "no-trailing-spaces": [
-        0, 
+        0,
         { "skipBlankLines": true }
       ]
     }

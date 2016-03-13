@@ -6,7 +6,9 @@
     "bootstrap": "4.0",
     "font-awesome": "fontawesome#^4.5.0",
     "sass-css3-mixins": "*",
-    "bootstrap-daterangepicker": "^2.1.19"
+    "bootstrap-daterangepicker": "^2.1.19",
+    "jquery": "^2.2.1",
+    "include-media": "^1.4.2"
   },
   "overrides": {
     "bootstrap": {

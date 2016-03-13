@@ -46,3 +46,8 @@ $opensans-bold			:	'open_sansbold';
 $opensans-light			:	'open_sanslight';
 $opensans				:	'open_sansregular';
 $opensans-semibold		:	'open_sanssemibold';
+
+
+
+// Plug in include-media to BS4 grid breakpoints map
+$breakpoints: $grid-breakpoints;

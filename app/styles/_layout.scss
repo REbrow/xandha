@@ -3,19 +3,23 @@
   width: 100%;
   height: auto;
   box-shadow: inset 0 80px 100px rgba($black, 0.6);
+
   & video{
     position: absolute;
     z-index: -1;
     top: 50%;
     left: 50%;
-    min-width: 100%;
+    max-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background-size: cover; 
+    background-size: cover;
+  }
 
+  @include media("<sm"){
+    background-color: $orange;
   }
 }
 
@@ -25,11 +29,17 @@ nav[role="main-nav"]{
 	height: 10vh;
 
 	.navbar-brand{
-		margin-right: rem-calc(50);
+		//margin-right: rem-calc(50);
+    padding-top: 0;
 		font-size: rem-calc(30);
 		font-weight: bold;
 		font-family: $opensans-bold;
 	}
+
+  button.navbar-toggler{
+    color: $white;
+    font-size: rem-calc(30);
+  }
 
 	button.btn-primary{
 		margin-right: rem-calc(20);
@@ -56,6 +66,10 @@ nav[role="main-nav"]{
   	text-shadow: none;
     display: block;
     margin-top: 30vh;
+    font-size: 5rem;
+    @include media('<=sm'){
+      font-size: 3rem;
+    }
   }
 
   & p{
@@ -66,7 +80,25 @@ nav[role="main-nav"]{
   }
 
   & form{
-    @include centerer($horizontal:true, $vertical:false);
+
+
+    @include media("<=sm"){
+      margin: 1rem 3rem auto 3rem;
+      width: auto;
+    }
+
+    @include media(">=md"){
+      @include center-block();
+      width: 600px;
+    }
+  }
+
+  & button{
+    @include media("<sm"){
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -190,10 +222,6 @@ nav[role="main-nav"]{
 /*======== TRENDING DESTINATIONS ========*/
 
 .trending-destinations {
-	@extend %vertical-padding;
-	.col-lg-12 {
-		padding: 0 rem-calc(100);
-	}
 
 	.section-header {
 		margin-top: rem-calc(20);
@@ -215,18 +243,30 @@ nav[role="main-nav"]{
 			float: right;
 		}
 	}
+
+  @include media(">=md"){
+    @extend %vertical-padding;
+    .col-lg-12 {
+      padding: 0 rem-calc(100);
+    }
+  }
 }
 
 
 /*======== ACTIVITIES ========*/
 
 .activities {
-	@extend %vertical-padding;
-  padding-left: rem-calc(85);
-  padding-right: rem-calc(85);
 
-  .col-lg-12 {
-    padding: 0 rem-calc(100);
+
+  @include media(">=md"){
+    @extend %vertical-padding;
+    padding-left: rem-calc(85);
+    padding-right: rem-calc(85);
+
+    .col-lg-12 {
+      padding: 0 rem-calc(100);
+    }
+
   }
 
 	.section-header {

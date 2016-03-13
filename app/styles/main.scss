@@ -5,6 +5,7 @@ $icon-font-path: '../fonts/';
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 @import "bower_components/sass-css3-mixins/css3-mixins.scss";
 @import "bower_components/bootstrap-daterangepicker/daterangepicker.scss";
+@import "bower_components/include-media/dist/include-media";
 // endbower
 
 // Import Partials
@@ -15,6 +16,9 @@ $icon-font-path: '../fonts/';
 @import "base";
 @import "layout";
 //
+
+// Plug in include-media to BS4 grid breakpoints map
+$breakpoints: $grid-breakpoints;
 
 
 .browserupgrade {

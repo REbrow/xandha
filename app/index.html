@@ -28,27 +28,30 @@
     <![endif]-->
     <!--======== Landing Viewport wrap ========-->
     <div class="landing-viewport-wrap">
-    <video autoplay loop id="bgvid">
+    <video autoplay loop id="bgvid" class="hidden-sm-down">
         <source src="images/globe.mp4" type="video/mp4">
     </video>
       <!-- Top Nav -->
       <nav class="navbar navbar-full" role="main-nav">
         <a href="#" class="navbar-brand">Xandha</a>
-        <button type="button" class="btn btn-secondary pull-md-right">Sign Up</button>
-        <button type="button" class="btn btn-primary pull-md-right">Log in</button>
+        <button type="button" class="btn btn-secondary pull-xs-right hidden-sm-down">Sign Up</button>
+        <button type="button" class="btn btn-primary pull-xs-right hidden-sm-down">Log in</button>
+        <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+          &#9776;
+        </button>
       </nav><!-- End of Top Nav -->
 
       <div class="container-fluid">
         <!-- Landing Viewport content -->
         <div class="landing-viewport-content">
           <div class="inner">
-            <h2 class="display-3">Find amazing spots to relax</h2>
-            <p>Cras justo odio, dapibus facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <h2>Find amazing spots to relax</h2>
+            <p class="hidden-sm-down">Find that perfect spot to chillout and unwind, or if you prefer, have breath-taking fun. Why wait? You can start right below.</p>
             <!-- Booking Form -->
-            <form class="form-inline">
-              <div class="form-group">
-                <label class="sr-only" for="selectDestination">Email address</label>
-                <select class="form-control form-control-lg" id="selectDestination">
+            <form>
+              <div class="row">
+                <div class="col-xs-12 col-md-8">
+                  <select class="form-control form-control-lg col-xs-12 col-md-8" id="selectDestination">
                   <option value="">Select Destination</option>}
                   option
                   <option>La Manga Ilashe</option>
@@ -59,12 +62,14 @@
                   <option>La Campagne Beach Resort</option>}
                   option
                 </select>
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                  <button type="submit" class="btn btn-primary btn-lg col-md-4 hidden-sm-down">Search</button>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block hidden-sm-up">Search</button>
+                </div>
               </div>
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                <input type="text" class="form-control form-control-lg" id="exampleInputPassword3" placeholder="Check In" name="daterange">
-              </div>
-              <button type="submit" class="btn btn-primary btn-lg">Book</button>
+
             </form>
             <!-- End of Booking Form -->
           </div>
@@ -72,7 +77,7 @@
       </div>
 
       <!--Landing Viewport Footer -->
-      <div class="landing-viewport-footer">
+      <div class="landing-viewport-footer hidden-sm-down">
           <ul>
             <li><a href="#" title="">Destinations</a></li>
             <li><a href="#" title="">Packages</a></li>
@@ -94,7 +99,7 @@
 
 
     <!-- ======== Intro Section ======== -->
-    <div class="content-wrap">
+    <div class="content-wrap hidden-sm-down">
       <div class="container">
         <!-- Introductory phrase -->
         <div class="row intro">
@@ -198,7 +203,7 @@
               </p>
             </div><!--/.col-lg-12-->
 
-            <div class="col-sm-2 col-md-8 columns activity-card-container">
+            <div class="col-xs-12 col-md-8 columns activity-card-container">
               <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg')">
                 <a href="#" title="">
                   <div class="content-wrap">
@@ -209,7 +214,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-sm-2 col-md-4 columns activity-card-container">
+            <div class="col-xs-12 col-md-4 columns activity-card-container">
               <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg')">
                 <a href="#" title="">
                   <div class="content-wrap">
@@ -220,7 +225,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-sm-2 col-md-4 columns activity-card-container">
+            <div class="col-xs-12 col-md-4 columns activity-card-container">
               <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg')">
                 <a href="#" title="">
                   <div class="content-wrap">
@@ -231,7 +236,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-sm-2 col-md-4 columns activity-card-container">
+            <div class="col-xs-12 col-md-4 columns activity-card-container">
               <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg')">
                 <a href="#" title="">
                   <div class="content-wrap">
@@ -242,7 +247,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-sm-2 col-md-4 columns activity-card-container">
+            <div class="col-xs-12 col-md-4 columns activity-card-container">
               <div class="activity-card" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg')">
                 <a href="#" title="">
                   <div class="content-wrap">
