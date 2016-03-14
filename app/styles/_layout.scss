@@ -20,6 +20,9 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
+    &::-webkit-media-controls{
+      display: none !important;
+    }
     @include media(">=xl"){
       min-width: 100%;
       max-width: auto;
@@ -38,10 +41,11 @@ nav[role="main-nav"]{
 	height: 10vh;
 
 	.navbar-brand{
-    padding-top: 0;
-		font-size: rem-calc(30);
+    margin-top: -10px;
+		font-size: 2.5rem;
 		font-weight: bold;
 		font-family: $opensans-bold;
+    color: $white;
 	}
 
   button.navbar-toggler{
@@ -51,6 +55,13 @@ nav[role="main-nav"]{
 
 	button.btn-primary{
 		margin-right: rem-calc(20);
+    background-color: $primary;
+    border-color: $primary;
+    transition: all 0.3s ease;
+    &:hover{
+      background-color: $comp_1;
+      border-color: $comp_1;
+    }
 	}
 }
 
@@ -78,6 +89,7 @@ nav[role="main-nav"]{
     margin-top: 30vh;
     font-size: 5rem;
     @include media('<sm'){
+      margin-top: 15vh;
       font-size: 3rem;
     }
   }
@@ -92,11 +104,11 @@ nav[role="main-nav"]{
   & form{
    
     & .input-group-addon{
-      background-color: #38C1C1;
+      background-color: $primary;
       color: $white;
-      border: #38C1C1;
+      border: $primary;
       &:hover{
-        background-color: darken(#38C1C1, 20%);
+        background-color: darken($primary, 20%);
         cursor: pointer;
       }
     }
@@ -122,8 +134,8 @@ nav[role="main-nav"]{
 }
 
 .landing-viewport-footer{
-  height: 10vh;
-  background-color: rgba($styx, 0.9);
+  height: auto;
+  background-color: rgba($primary, 0.7);
   clear: both;
   overflow: hidden;
   & p, a{
@@ -144,14 +156,18 @@ nav[role="main-nav"]{
       display: table-cell;
       text-align: center;
       vertical-align: middle;
-      border-right: thin solid lighten($styx, 10%);
+      border-right: thin solid darken($primary, 15%);
     }
     & a{
+      height: 10vh;
       display: block;
       padding: 3.5vh 3.5vw;
       font-family: $raleway-bold;
+      transition: all 0.3s ease;
       &:hover{
-        background-color: $aprikose;
+        height: 10vh;
+        display: block;
+        background-color: $comp_1; 
         padding: 3.5vh 3.5vw;
         text-decoration: none;
       }
@@ -166,8 +182,12 @@ nav[role="main-nav"]{
           border: none; //thin solid lighten($styx, 10%);
       }
       & a{
+        height: 10vh;
+        display: block;
         padding: 3.5vh .5vw;
         &:hover{
+          height: 10vh;
+          display: block;
           padding: 3.5vh .5vw;
         }
       }
@@ -206,6 +226,7 @@ nav[role="main-nav"]{
 
 .section-header {
 	font-family: $raleway-bold;
+  font-size: 3rem;
 }
 
 .section-subtext {
@@ -221,6 +242,13 @@ nav[role="main-nav"]{
 	.section-subtext {
 		margin-bottom: rem-calc(100);
 	}
+
+  @include media(">=md"){
+    @extend %vertical-padding;
+    .section-subtext {
+      margin-bottom: rem-calc(50);
+    }
+  }
 }
 
 
@@ -233,7 +261,7 @@ nav[role="main-nav"]{
   width: 100%;
   height: auto;
   &[class~="padded"]{
-    background-color: #f4f4f4;
+    background-color: $neutral1;
   }
 }
 
@@ -245,7 +273,7 @@ nav[role="main-nav"]{
 	.section-header {
 		margin-top: rem-calc(20);
     margin-bottom: rem-calc(50);
-    font-size: 50px;
+    font-size: 3rem;
 	}
 
 	.card-img-top {
@@ -263,7 +291,11 @@ nav[role="main-nav"]{
 		}
 	}
 
-  @include media(">=md"){
+  @include media(">=md", "<lg"){
+      @extend %vertical-padding;
+  }
+
+  @include media(">=lg"){
     @extend %vertical-padding;
     .col-lg-12 {
       padding: 0 rem-calc(100);
@@ -275,9 +307,11 @@ nav[role="main-nav"]{
 /*======== ACTIVITIES ========*/
 
 .activities {
+  @include media(">=md", "<lg"){
+      @extend %vertical-padding;
+  }
 
-
-  @include media(">=md"){
+  @include media(">=lg"){
     @extend %vertical-padding;
     padding-left: rem-calc(85);
     padding-right: rem-calc(85);
@@ -290,7 +324,7 @@ nav[role="main-nav"]{
 
 	.section-header {
 		margin-bottom: rem-calc(50);
-		font-size: 50px;
+		font-size: 3rem;
 	}
 
   .activity-card-container{
@@ -343,13 +377,11 @@ nav[role="main-nav"]{
 /*======== PARTNERSHIPS ========*/
 
 .partnerships {
-  .col-lg-12{
-    padding: 0 auto;
-  }
 
   .section-header{
     margin-bottom: rem-calc(50);
-    font-size: 50px;
+    font-size: 3rem;
+    @include center-block();
   }
   .col-lg-6 {
     margin-bottom: 1.5rem;
