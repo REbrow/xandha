@@ -111,7 +111,7 @@ nav[role="main-nav"]{
       color: $white;
       border: $primary;
       &:hover{
-        background-color: darken($primary, 20%);
+        background-color: $comp_1;
         cursor: pointer;
       }
     }
@@ -159,7 +159,11 @@ nav[role="main-nav"]{
       display: table-cell;
       text-align: center;
       vertical-align: middle;
-      border-right: thin solid darken($primary, 15%);
+      border-right: thin solid darken($primary, 10%);
+      transition: all 0.3s ease;
+      &:hover{
+        border-right: thin solid $comp_1;
+      }
     }
     & a{
       height: 10vh;
@@ -182,7 +186,7 @@ nav[role="main-nav"]{
       width: 15%;
       border: none;
       & li{
-          border: none; //thin solid lighten($styx, 10%);
+          border: none; 
       }
       & a{
         height: 10vh;
@@ -242,7 +246,11 @@ nav[role="main-nav"]{
 
 .intro{
 	//@extend %vertical-padding;
-	.section-subtext {
+  & .section-header{
+    color: $primary;
+  }
+
+	h2.section-subtext {
 		margin-bottom: rem-calc(100);
 	}
 
@@ -410,6 +418,14 @@ nav[role="main-nav"]{
   padding-bottom: 2%;
   color: darken($white, 10%);
 
+  & a{
+    color: darken($white, 10%);
+    &:hover{
+      color: $comp_2;
+      text-decoration: none;
+    }
+  }
+
   & h4{
     font-family: $raleway-bold;
   }
@@ -419,16 +435,18 @@ nav[role="main-nav"]{
   }
 
   & hr{
-    border-color: lighten($black, 20%);
+    border-color: rgba($white, 0.3);
   }
 }
 
 .upper-footer{
-  background-color: lighten($black, 10%);
+  //background-color: lighten($black, 10%);
+  background-color: darken($primary, 5%);
 }
 
 .bottom-footer{
-  background-color: lighten($black, 5%);
+  //background-color: lighten($black, 5%);
+  background-color: darken($primary, 12%);
 }
 
 
@@ -457,6 +475,6 @@ nav[role="main-nav"]{
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 }

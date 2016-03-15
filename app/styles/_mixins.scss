@@ -19,6 +19,7 @@
     filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
 }
 
+
 // vertical & Horizontal Centering
 // @param {Boolean} $horizontal - Center horizontally?
 // @param {Boolean} $vertical - Center Vertically?
@@ -37,3 +38,11 @@
     transform: translate(0, -50%);
   }
 }
+
+
+// Default effect transition settings
+// @param {string} $property - property animated (coould be multiple)
+// @param {int} $transition-duration
+// @param {string} $transition-func
+// @param {string} $transition-delay
+
