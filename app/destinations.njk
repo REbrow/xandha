@@ -1,0 +1,21 @@
+{% extends "layouts/default.njk" %}
+{% block content %}
+{% include "layouts/partials/top-nav.njk" %}
+
+<div class="page-header container-fluid">
+       <h4>Page Header</h4> 
+</div>
+<div class="container">
+	<div class="row">
+	<div class="card-columns">
+	    {% include "layouts/partials/destination-card.njk" %}
+	    {% include "layouts/partials/destination-card.njk" %}
+	    {% include "layouts/partials/destination-card.njk" %}
+	    {% include "layouts/partials/destination-card.njk" %}
+	    {% include "layouts/partials/destination-card.njk" %}
+    </div>
+    </div>
+</div>
+{% include "layouts/partials/main-footer.njk" %}
+    
+{% endblock %}

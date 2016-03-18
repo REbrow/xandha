@@ -52,7 +52,7 @@ gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('views', () => {
-  return gulp.src('app/*.njk')
+  return gulp.src('app/**/*.njk')
   .pipe($.nunjucksRender({
     path: 'app'
   }))

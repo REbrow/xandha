@@ -9,17 +9,7 @@
           <source src="images/globe.mp4" type="video/mp4">
       </video>
 
-      <!-- Top Nav -->
-      <nav class="navbar navbar-full" role="main-nav">
-        <a href="#" class="navbar-brand">
-          <img src="images/xandha_logo.svg" alt="">
-        </a>
-        <button type="button" class="btn btn-secondary pull-xs-right hidden-sm-down">Sign Up</button>
-        <button type="button" class="btn btn-primary pull-xs-right hidden-sm-down">Log in</button>
-        <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-          &#9776;
-        </button>
-      </nav><!-- End of Top Nav -->
+      {% include "layouts/partials/top-nav.njk" %}
 
       <div class="container-fluid">
         <!-- Landing Viewport content -->
@@ -47,7 +37,7 @@
       <!--Landing Viewport Footer -->
       <div class="landing-viewport-footer hidden-sm-down">
           <ul>
-            <li><a href="#" title="">Destinations</a></li>
+            <li><a href="destinations.html" title="">Destinations</a></li>
             <li><a href="#" title="">Packages</a></li>
             <li><a href="#" title="">Events</a></li>
             <li><a href="#" title="">Tourism Mart</a></li>
@@ -272,55 +262,6 @@
       <!--======== End of Centering Container ========-->
     </div><!-- /.Content Wrap -->
 
-
-    <!--======== Upper + Lower Site wide Footer ======== -->
-    <div class="upper-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3">
-            <h4>Xandha</h4>
-            <hr>
-            <p>Find amazing spots &amp; destinations to relax with Xandha. We provide you with the best tourism information, destinations &amp; packages across Nigeria</p>
-          </div>
-          <div class="col-sm-2 col-md-offset-2">
-            <h4>About</h4>
-            <ul>
-              <li><a href="#" title="">About</a></li>
-              <li><a href="#" title="">Team</a></li>
-              <li><a href="#" title="">How it works</a></li>
-              <li><a href="#" title="">Partner with Us</a></li>
-              <li><a href="#" title="">Customer Stories</a></li>
-              <li><a href="#" title="">Company Blog</a></li>
-              <li><a href="#" title="">Help Center</a></li>
-              <li><a href="#" title="">Feedback</a></li>
-              <li><a href="#" title="">Careers</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <h4>Contact</h4>
-            <ul>
-              <li><a href="#" title="">Travel Agents</a></li>
-              <li><a href="#" title="">Hotels</a></li>
-              <li><a href="mailto:info@xandha.com" title="">info@xandha.com</a></li>
-              <li><a href="mailto:hr@xandha.com" title="">hr@xandha.com</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <h4>Blog</h4>
-            <p>Stuff to be output here</p>
-          </div>
-        </div><!-- End of row -->
-      </div><!-- End of container -->
-    </div><!-- /.upper-footer -->
-    <div class="bottom-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <p class="pull-xs-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2016 Xandha, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </div><!-- /.bottom-footer -->
-    <!--======== End of Upper + Lower Site wide Footer ======== -->
+    {% include "layouts/partials/main-footer.njk" %}
+    
     {% endblock %}
