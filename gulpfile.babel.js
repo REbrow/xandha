@@ -51,8 +51,16 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
+gulp.task('views', () => {
+  return gulp.src('app/*.njk')
+  .pipe($.nunjucksRender({
+    path: 'app'
+  }))
+  .pipe(gulp.dest('.tmp'))
+});
+
+gulp.task('html', ['views', 'styles', 'scripts'], () => {
+  return gulp.src(['app/*.html', '.tmp/*.html'])
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
@@ -86,7 +94,8 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    '!app/*.html'
+    '!app/*.html',
+    '!app/*.njk'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
@@ -94,7 +103,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -108,11 +117,14 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
 
   gulp.watch([
     'app/*.html',
+    '.tmp/*.html',
     '.tmp/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/**/*.html', ['views', reload]);
+  gulp.watch('app/**/*.njk', ['views', reload]);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
@@ -156,12 +168,25 @@ gulp.task('wiredep', () => {
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('app/*.html')
+  gulp.src('app/layouts/*.njk')
     .pipe(wiredep({
       exclude: ['bootstrap'],
-      ignorePath: /^(\.\.\/)*\.\./
+      ignorePath: /^(\.\.\/)*\.\./,
+      fileTypes: {
+        njk: {
+          block: /(([ \t]*)<!--\s*bower:*(\S*)\s*-->)(\n|\r|.)*?(<!--\s*endbower\s*-->)/gi,
+          detect: {
+            js: /<script.*src=['"]([^'"]+)/gi,
+            css: /<link.*href=['"]([^'"]+)/gi
+          },
+          replace: {
+              js: '<script src="{{filePath}}"></script>',
+              css: '<link rel="stylesheet" href="{{filePath}}" />'
+          }
+        }
+      }
     }))
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('app/layouts'));
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
