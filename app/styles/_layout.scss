@@ -456,10 +456,11 @@ nav[role="main-nav"]{
 .page-header{
   background-color: $neutral2;
   height: 8rem;
-  padding: 0 15%;
+  //padding: 0 15%;
   // background: url("images/destination_images/slide2.jpg") no-repeat;
   // background-size: cover;
   & h2{
+    @include center-block();
     margin-top: 2.5rem;
     font-family: $raleway-bold;
     color: $white;
