@@ -45,7 +45,7 @@ nav[role="main-nav"]{
 		font-size: 2.5rem;
 		font-weight: bold;
 		font-family: $opensans-bold;
-    color: $white;  
+    color: $white;
     & img{
       max-width: 10rem;
     }
@@ -105,7 +105,7 @@ nav[role="main-nav"]{
   }
 
   & form{
-   
+
     & .input-group-addon{
       background-color: $primary;
       color: $white;
@@ -174,7 +174,7 @@ nav[role="main-nav"]{
       &:hover{
         height: 10vh;
         display: block;
-        background-color: $comp_1; 
+        background-color: $comp_1;
         padding: 3.5vh 3.5vw;
         text-decoration: none;
       }
@@ -186,7 +186,7 @@ nav[role="main-nav"]{
       width: 15%;
       border: none;
       & li{
-          border: none; 
+          border: none;
       }
       & a{
         height: 10vh;
@@ -456,6 +456,20 @@ nav[role="main-nav"]{
 .featurette-divider {
   margin: 2rem 0; /* Space out the Bootstrap <hr> more */
 }
+
+
+
+/*======== Page Header ========*/
+.page-header{
+  background-color: $primary;
+  height: 10rem;
+}
+
+/*======== filter space ========*/
+.filter-space{
+  @extend %vertical-padding;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
