@@ -68,6 +68,54 @@ nav[role="main-nav"]{
 	}
 }
 
+/*======== Alternate top nav ========*/
+nav[role="alt-nav"]{
+  //background-color: $comp_2;
+  padding-top: rem-calc(25);
+  height: 10vh;
+
+  .navbar-brand{
+    margin-top: -15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: $opensans-bold;
+    color: $white;
+    & img{
+      max-width: 9rem;
+    }
+  }
+
+  .navbar-nav{
+    margin-left: 3rem;
+  }
+
+  .navbar-nav li a{
+    font-family: $raleway-bold;
+    color: $neutral2;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover{
+      color: $comp_1;
+    }
+  }
+
+  button.navbar-toggler{
+    color: $white;
+    font-size: rem-calc(30);
+  }
+
+  button.btn-primary{
+    margin-right: rem-calc(20);
+    background-color: $primary;
+    border-color: $primary;
+    transition: all 0.3s ease;
+    &:hover{
+      background-color: $comp_1;
+      border-color: $comp_1;
+    }
+  }
+}
+
 /*======== Landing Viewport content styles ========*/
 .landing-viewport-content {
   height: 80vh;
@@ -454,16 +502,24 @@ nav[role="main-nav"]{
 
 /*======== Page Header ========*/
 .page-header{
+  width: 100%;
+  display: block;
   background-color: $neutral2;
   height: 8rem;
-  //padding: 0 15%;
-  // background: url("images/destination_images/slide2.jpg") no-repeat;
+  padding: 1rem 0;
+  // background: url("../images/destination_images/slide2.jpg") no-repeat;
   // background-size: cover;
+  // box-shadow: inset 0 8rem 8rem rgba($black, 0.6);
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, $fundy-fog, $ancient-ochre); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, $fundy-fog, $ancient-ochre); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, $fundy-fog, $ancient-ochre); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $fundy-fog, $ancient-ochre); /* Standard syntax */ 
   & h2{
-    @include center-block();
     margin-top: 2.5rem;
     font-family: $raleway-bold;
     color: $white;
+    text-align: center;
   }
 }
 
@@ -497,3 +553,24 @@ nav[role="main-nav"]{
     margin-top: 5rem;
   }
 }
+
+
+/*======== Generic page wrapper ========*/
+.page-wrap{
+  width: 100%;
+  display: block;
+  height: auto;
+  background-color: $neutral1;
+}
+
+/*======== Destination profile layout ========*/
+.destination-profile-image{
+  //background-color: $aprikose;
+  max-height: 30rem;
+  overflow-y: hidden;
+  & img{
+    width: 100%;
+    //height: 30rem;
+  }
+}
+
