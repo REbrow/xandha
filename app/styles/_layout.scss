@@ -314,7 +314,12 @@ nav[role="alt-nav"]{
   width: 100%;
   height: auto;
   &[class~="padded"]{
-    background-color: $neutral1;
+    //background-color: $neutral1;
+    background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, $fundy-fog, $neutral1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, $fundy-fog, $neutral1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, $fundy-fog, $neutral1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $fundy-fog, $neutral1); /* Standard syntax */
   }
 }
 
@@ -571,7 +576,7 @@ nav[role="alt-nav"]{
     & div[class~="col-md-4"]{
       background-color: $comp_2;
     }
-    & h2{
+    & h2, h4{
       color: $neutral2;
       font-family: $raleway-bold;
     }
