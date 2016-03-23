@@ -71,7 +71,7 @@ nav[role="main-nav"]{
 /*======== Alternate top nav ========*/
 nav[role="alt-nav"]{
   //background-color: $comp_2;
-  padding-top: rem-calc(25);
+  padding-top: rem-calc(20);
   height: 10vh;
 
   .navbar-brand{
@@ -79,7 +79,8 @@ nav[role="alt-nav"]{
     font-size: 2.5rem;
     font-weight: bold;
     font-family: $opensans-bold;
-    color: $white;
+    color: $primary;
+
     & img{
       max-width: 9rem;
     }
@@ -325,7 +326,7 @@ nav[role="alt-nav"]{
 	.section-header {
 		margin-top: rem-calc(20);
     margin-bottom: rem-calc(50);
-    font-size: 3rem;
+    font-size: 2rem;
 	}
 
 	.card-img-top {
@@ -376,7 +377,7 @@ nav[role="alt-nav"]{
 
 	.section-header {
 		margin-bottom: rem-calc(50);
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
   .activity-card-container{
@@ -432,7 +433,7 @@ nav[role="alt-nav"]{
 
   .section-header{
     margin-bottom: rem-calc(50);
-    font-size: 3rem;
+    font-size: 2rem;
     @include center-block();
   }
   .col-lg-6 {
@@ -514,7 +515,7 @@ nav[role="alt-nav"]{
   background: -webkit-linear-gradient(left top, $fundy-fog, $ancient-ochre); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, $fundy-fog, $ancient-ochre); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, $fundy-fog, $ancient-ochre); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, $fundy-fog, $ancient-ochre); /* Standard syntax */ 
+  background: linear-gradient(to bottom right, $fundy-fog, $ancient-ochre); /* Standard syntax */
   & h2{
     margin-top: 2.5rem;
     font-family: $raleway-bold;
@@ -560,17 +561,32 @@ nav[role="alt-nav"]{
   width: 100%;
   display: block;
   height: auto;
-  background-color: $neutral1;
+  background-color: darken($neutral1, 5%);
+  & .container{
+    background-color: $white;
+    & div[class*="col-"]{
+      @extend %vertical-padding;
+      min-height: 500px;
+    }
+    & div[class~="col-md-4"]{
+      background-color: $comp_2;
+    }
+    & h2{
+      color: $neutral2;
+      font-family: $raleway-bold;
+    }
+  }
 }
 
 /*======== Destination profile layout ========*/
 .destination-profile-image{
-  //background-color: $aprikose;
-  max-height: 30rem;
-  overflow-y: hidden;
+  width: 100%;
+  height: 20rem;
+  background-color: $neutral2;
+  background-size: cover;
+  background: url("../images/destination_images/slide2.jpg") no-repeat;
   & img{
     width: 100%;
-    //height: 30rem;
   }
 }
 

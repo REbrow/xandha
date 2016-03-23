@@ -15,5 +15,8 @@
 //     console.log('A new date range was chosen: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
 // });
 
-
-$(".page-header").css("color: red");
+ $(".destination-profile-image").backstretch([
+      "../images/destination_images/slide2.jpg"
+    , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
+    , "../images/destination_images/slide1.jpg"
+  ], {duration: 3500, fade: 900});
