@@ -10,7 +10,8 @@
     "jquery": "^2.2.1",
     "include-media": "^1.4.2",
     "tether": "^1.2.0",
-    "jquery-backstretch": "^2.0.4"
+    "jquery-backstretch": "^2.0.4",
+    "gmaps": "^0.4.23"
   },
   "overrides": {
     "bootstrap": {

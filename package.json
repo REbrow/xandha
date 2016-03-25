@@ -45,7 +45,14 @@
         {
           "skipBlankLines": true
         }
-      ]
+      ],
+      "no-unused-vars": [
+        0, 
+        { 
+          "vars": "all", "args": "after-used" 
+        }
+      ],
+      "no-undef": 0
     }
   }
 }

@@ -35,22 +35,29 @@ $ancient-ochre : rgb(244,210,121);
 $global-edge-margin:	30px;
 
 
-/* INSTALLED FONTS
--------------------------------------------------- */
+/*======== Typography Settings ========*/
 
-//Raleway
+
+/* INSTALLED FONTS*/
+
+// Raleway
 $raleway-bold			:	'ralewaybold';
 $raleway-extra-bold		:	'ralewayextrabold';
 $raleway-light			:	'ralewaylight';
 $raleway				:	'ralewayregular';
 $raleway-thin			:	'ralewaythin';
 
-
-//Opensans
+// Opensans
 $opensans-bold			:	'open_sansbold';
 $opensans-light			:	'open_sanslight';
 $opensans				:	'open_sansregular';
 $opensans-semibold		:	'open_sanssemibold';
+
+
+$headings-font-family	: 	$raleway-bold;
+$paragraph-font-family	: 	$opensans;
+$link-font-family		: 	$opensans;
+
 
 
 
@@ -59,6 +66,7 @@ $breakpoints: $grid-breakpoints;
 
 
 // Layout Variables
+
 
 
 

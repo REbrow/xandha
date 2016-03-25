@@ -20,3 +20,10 @@
     , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
     , "../images/destination_images/slide1.jpg"
   ], {duration: 3500, fade: 900});
+
+
+var map = new GMaps({
+    div: '#map',
+    lat: -12.043333,
+    lng: -77.028333
+});
