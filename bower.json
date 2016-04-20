@@ -11,7 +11,9 @@
     "include-media": "^1.4.2",
     "tether": "^1.2.0",
     "jquery-backstretch": "^2.0.4",
-    "gmaps": "^0.4.23"
+    "gmaps": "^0.4.23",
+    "angular": "angularjs#^1.5.5",
+    "angular-route": "^1.5.5"
   },
   "overrides": {
     "bootstrap": {
@@ -24,5 +26,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
+  },
+  "resolutions": {
+    "jquery": "^2.2.1"
   }
 }
