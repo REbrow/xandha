@@ -1,0 +1,23 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Set body base font family and lighter body text */
+
+body {
+  color: #5a5a5a;
+  font-family: $paragraph-font-family;
+}
+
+
+
+
+.btn .success{
+	background-color: $primary;
+	&:hover{
+		background-color: $comp_1;
+		border: thin solid $comp_1;
+	}
+}
+
+.emphasis{
+	color: $comp_2;
+}

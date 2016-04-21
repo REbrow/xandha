@@ -1,0 +1,644 @@
+/*======== Landing Viewport wrapper ========*/
+.landing-viewport-wrap{
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: auto;
+  box-shadow: inset 0 80px 100px rgba($black, 0.6);
+
+  & video{
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    max-width: auto;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    &::-webkit-media-controls{
+      display: none !important;
+    }
+    @include media(">=xl"){
+      min-width: 100%;
+      max-width: auto;
+    }
+  }
+
+  @include media("<sm"){
+    //background-color: $orange;
+    box-shadow: none;
+  }
+}
+
+/*======== Customize landing viewport top nav ========*/
+nav[role="main-nav"]{
+	padding-top: rem-calc(15);
+	height: 10vh;
+
+	.navbar-brand{
+    margin-top: -10px;
+		font-size: 2.5rem;
+		font-weight: bold;
+		font-family: $headings-font-family;
+    color: $white;
+    & img{
+      max-width: 10rem;
+    }
+	}
+
+  button.navbar-toggler{
+    color: $white;
+    font-size: rem-calc(30);
+  }
+
+	button.btn-primary{
+		margin-right: rem-calc(20);
+    background-color: $primary;
+    border-color: $primary;
+    transition: all 0.3s ease;
+    &:hover{
+      background-color: $comp_1;
+      border-color: $comp_1;
+    }
+	}
+}
+
+/*======== Alternate top nav ========*/
+nav[role="alt-nav"]{
+  // background-color: $comp_2;
+  padding-top: rem-calc(20);
+  height: auto;
+
+  .navbar-brand{
+    margin-top: -15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: $opensans-bold;
+    color: $primary;
+
+    & img{
+      max-width: 9rem;
+    }
+  }
+
+  .navbar-nav{
+    margin-left: 3rem;
+  }
+
+  .navbar-nav li a{
+    font-family: $raleway-bold;
+    color: $neutral2;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover{
+      color: $comp_1;
+    }
+  }
+
+  button.navbar-toggler{
+    color: $white;
+    font-size: rem-calc(30);
+  }
+
+  button.btn-primary{
+    margin-right: rem-calc(20);
+    background-color: $primary;
+    border-color: $primary;
+    transition: all 0.3s ease;
+    &:hover{
+      background-color: $comp_1;
+      border-color: $comp_1;
+    }
+  }
+}
+
+/*======== Landing Viewport content styles ========*/
+.landing-viewport-content {
+  height: 80vh;
+  margin-bottom: 0;
+  display: table;
+  width: 100%;
+
+  & .inner{
+    display: table-row;
+    text-align: center;
+  }
+
+  & h2, p{
+    color: $white;
+    text-align: center;
+  }
+
+  & h2{
+  	font-family: $raleway-bold;
+  	text-shadow: none;
+    display: block;
+    margin-top: 30vh;
+    font-size: 5rem;
+    @include media('<sm'){
+      margin-top: 15vh;
+      font-size: 3rem;
+    }
+  }
+
+  & p{
+  	text-shadow: none;
+    display: block;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  & form{
+    input.form-control{
+      border: 2px solid $white;
+    }
+
+    @include media("<=sm"){
+      margin: 1rem 3rem auto 3rem;
+      width: auto;
+    }
+
+    @include media(">=md"){
+      @include center-block();
+      width: 600px;
+    }
+  }
+
+  & button{
+    @include media("<sm"){
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.landing-viewport-footer{
+  height: auto;
+  background-color: rgba($primary, 0.7);
+  clear: both;
+  overflow: hidden;
+  & p, a{
+    color: $white;
+  }
+
+  & ul{
+    padding: 0;
+    display: table;
+    width: 60%;
+    //height: 10vh;
+    margin-left: 0; //auto;
+    margin-right: 0;//auto;
+    margin-bottom: 0;
+    float: left;
+    & li{
+      list-style: none;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      border-right: thin solid darken($primary, 10%);
+      transition: all 0.3s ease;
+      &:hover{
+        border-right: thin solid $comp_1;
+      }
+    }
+    & a{
+      height: 10vh;
+      display: block;
+      padding: 3.5vh 3.5vw;
+      font-family: $raleway-bold;
+      transition: all 0.3s ease;
+      &:hover{
+        height: 10vh;
+        display: block;
+        background-color: $comp_1;
+        padding: 3.5vh 3.5vw;
+        text-decoration: none;
+      }
+    }
+    &:nth-of-type(2){
+      margin-left: 0;
+      margin-right: 0;
+      float: right;
+      width: 15%;
+      border: none;
+      & li{
+          border: none;
+      }
+      & a{
+        height: 10vh;
+        display: block;
+        padding: 3.5vh .5vw;
+        &:hover{
+          height: 10vh;
+          display: block;
+          padding: 3.5vh .5vw;
+        }
+      }
+    }
+  }
+}
+
+/* COMMON CONTENT STYLES FOR LANDING PAGE
+-------------------------------------------------- */
+
+/* Placeholders */
+
+%vertical-padding {
+	padding-top: rem-calc(50);
+	padding-bottom: rem-calc(50);
+
+}
+
+%horizontal-padding {
+	@include media-breakpoint-up(sm) {
+	 	padding-left: rem-calc(50);
+		padding-right: rem-calc(50);
+	}
+
+	@include media-breakpoint-up(xl) {
+	 	padding-left: rem-calc(200);
+		padding-right: rem-calc(200);
+	}
+}
+
+/* Center and set styling for section header and sub-text */
+.section-header , .section-subtext{
+	@include center-block;
+	text-align: center;
+}
+
+.section-header {
+	font-family: $raleway-bold;
+  font-size: 3rem;
+}
+
+.section-subtext {
+	margin-bottom: rem-calc(50);
+}
+
+
+/* INTRODUCTORY CONTENT
+-------------------------------------------------- */
+
+.intro{
+	//@extend %vertical-padding;
+  & .section-header{
+    color: $primary;
+  }
+
+	h2.section-subtext {
+		margin-bottom: rem-calc(100);
+	}
+
+  @include media(">=md"){
+    @extend %vertical-padding;
+    .section-subtext {
+      margin-bottom: rem-calc(50);
+    }
+  }
+}
+
+
+
+
+/*======== Content Wrap ========*/
+.content-wrap{
+  //background-color: #EDEFED;
+  background-color: $white;
+  width: 100%;
+  height: auto;
+  &[class~="padded"]{
+    //background-color: $neutral1;
+    background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, $fundy-fog, $neutral1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, $fundy-fog, $neutral1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, $fundy-fog, $neutral1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $fundy-fog, $neutral1); /* Standard syntax */
+  }
+}
+
+
+/*======== TRENDING DESTINATIONS ========*/
+
+.trending-destinations {
+
+	.section-header {
+		margin-top: rem-calc(20);
+    margin-bottom: rem-calc(50);
+    font-size: 2rem;
+	}
+
+	.card-img-top {
+		max-width: 100%; //rem-calc(354);
+	}
+
+	.card-title {
+		color: $styx;
+		font-family: $raleway-bold;
+		font-size: 1rem;
+		&:after {
+			content: "\f152";
+			font-family: "FontAwesome";
+			float: right;
+		}
+	}
+
+  @include media(">=md", "<lg"){
+      @extend %vertical-padding;
+  }
+
+  @include media(">=lg"){
+    @extend %vertical-padding;
+    .col-lg-12 {
+      padding: 0 rem-calc(100);
+    }
+  }
+}
+
+
+/*======== ACTIVITIES ========*/
+
+.activities {
+  @include media(">=md", "<lg"){
+      @extend %vertical-padding;
+  }
+
+  @include media(">=lg"){
+    @extend %vertical-padding;
+    padding-left: rem-calc(85);
+    padding-right: rem-calc(85);
+
+    .col-lg-12 {
+      padding: 0 rem-calc(100);
+    }
+
+  }
+
+	.section-header {
+		margin-bottom: rem-calc(50);
+		font-size: 2rem;
+	}
+
+  .activity-card-container{
+    padding: rem-calc(10);
+    height: rem-calc(400);
+  }
+  .activity-card {
+    height: 100%;
+    display: block;
+    background-size: cover;
+  }
+
+  & a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    //transition
+    color: $white;
+  }
+
+  .content-wrap{
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($orange, 0);
+    transition: background-color 0.3s ease;
+
+    & .activity-content{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+
+      & h2{
+        font-family: $raleway-bold;
+        color: $white;
+      }
+    }
+
+    &:hover{
+      background-color: rgba($orange, 0.6);
+    }
+
+  }
+
+}
+
+
+/*======== PARTNERSHIPS ========*/
+
+.partnerships {
+
+  .section-header{
+    margin-bottom: rem-calc(50);
+    font-size: 2rem;
+    @include center-block();
+  }
+  .col-lg-6 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+  }
+
+   h4 {
+    font-weight: normal;
+    font-family: $raleway-bold;
+    margin-top: rem-calc(10);
+  }
+}
+
+
+/* FOOTER
+-------------------------------------------------- */
+.upper-footer, .bottom-footer{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: darken($white, 10%);
+
+  & a{
+    color: darken($white, 10%);
+    &:hover{
+      color: $comp_2;
+      text-decoration: none;
+    }
+  }
+
+  & h4{
+    font-family: $raleway-bold;
+  }
+  & ul{
+    list-style: none;
+    padding-left: 0;
+  }
+
+  & hr{
+    border-color: rgba($white, 0.3);
+  }
+}
+
+.upper-footer{
+  //background-color: lighten($black, 10%);
+  background-color: darken($primary, 5%);
+}
+
+.bottom-footer{
+  //background-color: lighten($black, 5%);
+  background-color: darken($primary, 12%);
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 2rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+
+
+/*======== Page Header ========*/
+.page-header{
+  width: 100%;
+  display: block;
+  background-color: $neutral2;
+  height: 8rem;
+  padding: 1rem 0;
+  // background: url("../images/destination_images/slide2.jpg") no-repeat;
+  // background-size: cover;
+  // box-shadow: inset 0 8rem 8rem rgba($black, 0.6);
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, $fundy-fog, $ancient-ochre); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, $fundy-fog, $ancient-ochre); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, $fundy-fog, $ancient-ochre); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $fundy-fog, $ancient-ochre); /* Standard syntax */
+  & h2{
+    margin-top: 2.5rem;
+    font-family: $raleway-bold;
+    color: $white;
+    text-align: center;
+  }
+}
+
+/*======== filter space ========*/
+.filter-space{
+  @extend %vertical-padding;
+}
+
+/*======== footer block ========*/
+.footer-block{
+  @extend %vertical-padding;
+  & button{
+    @include center-block();
+  }
+}
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 5rem;
+  }
+}
+
+
+/*======== Generic page wrapper ========*/
+.page-wrap{
+  width: 100%;
+  display: block;
+  height: auto;
+  //background-color: darken($neutral1, 5%);
+  & .container{
+    background-color: $white;
+    & div[class*="col-md-8"]{
+      @extend %vertical-padding;
+      min-height: 500px;
+    }
+    & aside{
+      @extend %vertical-padding;
+      background-color: $neutral1; //$comp_2;
+      & img{
+        // width: 100%;
+        // height: auto;
+        width: 50%;
+        height: auto;
+        opacity: 0.9;
+        transition: all 0.3s ease-in;
+        padding: 2px;
+        &:hover{
+          opacity: 1;
+        }
+      }
+
+      & .related-images{
+        padding: 0;
+        margin-bottom: 2rem;
+      }
+      & input.form-control{
+          border: 2px solid $input-border-color;
+          transition: all 0.3s ease;
+          margin-bottom: 1rem;
+          
+          &:hover{
+            border: 2px solid $primary;
+          }
+          &:focus{
+            border: 2px solid $primary;
+          }
+      }
+    }
+    & h2, h6{
+      color: $neutral2;
+      font-family: $raleway-bold;
+    }
+    & h6{
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/*======== Destination profile layout ========*/
+.destination-profile-image{
+  width: 100%;
+  height: 20rem;
+  background-color: $neutral2;
+  background-size: cover;
+  background: url("../images/destination_images/slide2.jpg") no-repeat;
+  & img{
+    width: 100%;
+  }
+}
+
+#map{
+  width: 100%;
+  height: 300px;
+}
+
+// .destination-feature{
+//   padding: 5px;
+//   display: inline-block;
+//   margin-right: 2px;
+//   background-color: $neutral2;
+//   border-radius: $border-radius;
+
+// }
+

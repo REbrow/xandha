@@ -1,0 +1,100 @@
+{% extends "layouts/default.njk" %}
+{% block content %}
+{% include "layouts/partials/top-nav-alt.njk" %}
+<div class="destination-profile-image">
+  <!--<img src="images/destination_images/slide2.jpg" alt="">-->
+</div>
+<div class="page-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <h2>Vantage Beach Hotel</h2>
+        <a>52 imaginary lane, middle of nowhere, #0000, Ikoyi, Lagos</a>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+        <hr>
+        <div class="row">
+          <div class="col-xs-6">
+            <h6>Facilities Available</h6>
+            <ul class="list-group">
+              <li class="list-group-item"><span class="fa fa-bed"></span>&nbsp; Rooms</li>
+              <li class="list-group-item"><span class="fa fa-wifi"></span>&nbsp;Free Wifi</li>
+              <li class="list-group-item"><span class="fa fa-ambulance"></span>&nbsp;Emergency response services</li>
+              <li class="list-group-item"><span class="fa fa-cutlery"></span>&nbsp;Fine dining</li>
+              <li class="list-group-item"><span class="fa fa-shopping-basket"></span>&nbsp;Discount shopping</li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6">
+            <h6>Facilities Available</h6>
+            <ul class="list-group">
+              <li class="list-group-item"><span class="fa fa-bed"></span>&nbsp; Rooms</li>
+              <li class="list-group-item"><span class="fa fa-wifi"></span>&nbsp;Free Wifi</li>
+              <li class="list-group-item"><span class="fa fa-ambulance"></span>&nbsp;Emergency response services</li>
+              <li class="list-group-item"><span class="fa fa-cutlery"></span>&nbsp;Fine dining</li>
+              <li class="list-group-item"><span class="fa fa-shopping-basket"></span>&nbsp;Discount shopping</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <h6>Activities available</h6>
+        <a href="#" class="activity">Snorkeling</a>,&nbsp;
+        <a href="#" class="activity">Diving</a>,&nbsp;
+        <a href="#" class="activity">Dining</a>,&nbsp;
+        <a href="#" class="activity">Go Karting</a>
+
+        <hr>
+
+        <div id="map"></div>
+        
+      </div>
+      <aside class="col-xs-12 col-md-4">
+        <h6>More Images</h6>
+        <hr>
+        <div class="row related-images">
+          <!--<div class="col-xs-6">
+            <img src="images/destination_images/slide2.jpg" class="pull-xs-left" />
+          </div>
+          <div class="col-xs-6">
+            <img src="images/destination_images/slide1.jpg" class="pull-xs-left" />
+          </div>
+          <div class="col-xs-6">
+            <img src="images/destination_images/slide1.jpg" class="pull-xs-left" />
+          </div>
+          <div class="col-xs-6">
+            <img src="images/destination_images/slide2.jpg" class="pull-xs-left" />
+          </div>-->
+
+          <div class="col-xs-12">
+            <img src="images/destination_images/slide2.jpg" class="pull-xs-left" />
+            <img src="images/destination_images/slide2.jpg" class="pull-xs-left" />
+            <img src="images/destination_images/slide2.jpg" class="pull-xs-left" />
+            <img src="images/destination_images/slide2.jpg" class="pull-xs-left" />
+          </div>
+        </div>
+        <hr>
+        <h6>Booking Form</h6>
+          <form>
+            <div class="row">
+            <div class="col-xs-12">
+              <input type="text" class="form-control" placeholder="#">
+            </div>
+            <div class="col-xs-12">
+              <input type="text" class="form-control" placeholder="#">
+            </div>
+            <div class="col-xs-12">
+              <buttton class="btn btn-lg btn-success btn-block">Book Destination</button>
+            </div>
+            </div>
+          </form>
+          
+        
+      </aside>
+    </div>
+  </div>
+</div>
+{% include "layouts/partials/main-footer.njk" %}
+{% endblock %}

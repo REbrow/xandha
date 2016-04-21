@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 nuget/content/
 nuget/bootstrap-fileinput.*.nupkg
 .DS_Store
+=======
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+test/bower_components
+>>>>>>> 9bb6a8be0eff93acd3b84b637516e67573f6b316
